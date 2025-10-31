@@ -1,0 +1,160 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme for MGNREGA - optimized for rural Indian users
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  #v0-built-with-button-5e071641-4f5d-4374-9cfd-8063c2086a94{
+    display: none !important;
+  }
+  :root {
+    /* Light mode - main colors */
+    --background: 0 0% 100%;
+    --foreground: 210 10% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 12%;
+
+    /* Green primary - representing growth and agriculture */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Orange/Amber secondary - representing warmth and culture */
+    --secondary: 35 97% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 7% 85%;
+    --muted-foreground: 210 10% 40%;
+
+    --accent: 51 94% 50%;
+    --accent-foreground: 210 10% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 7% 88%;
+    --input: 210 7% 93%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.5rem;
+
+    /* Status colors */
+    --success: 142 71% 45%;
+    --warning: 35 97% 52%;
+    --info: 217 91% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 210 10% 25%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 97% 52%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 7% 88%;
+    --sidebar-ring: 142 71% 45%;
+  }
+
+  .dark {
+    --background: 210 13% 9%;
+    --foreground: 210 8% 95%;
+
+    --card: 210 13% 15%;
+    --card-foreground: 210 8% 95%;
+
+    --popover: 210 13% 15%;
+    --popover-foreground: 210 8% 95%;
+
+    --primary: 142 71% 50%;
+    --primary-foreground: 210 13% 9%;
+
+    --secondary: 35 97% 52%;
+    --secondary-foreground: 210 13% 9%;
+
+    --muted: 210 11% 35%;
+    --muted-foreground: 210 8% 70%;
+
+    --accent: 51 94% 55%;
+    --accent-foreground: 210 13% 9%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 11% 25%;
+    --input: 210 11% 20%;
+    --ring: 142 71% 50%;
+
+    --success: 142 71% 50%;
+    --warning: 35 97% 52%;
+    --info: 217 91% 65%;
+
+    --sidebar-background: 210 13% 12%;
+    --sidebar-foreground: 210 8% 90%;
+    --sidebar-primary: 142 71% 50%;
+    --sidebar-primary-foreground: 210 13% 9%;
+    --sidebar-accent: 35 97% 52%;
+    --sidebar-accent-foreground: 210 13% 9%;
+    --sidebar-border: 210 11% 25%;
+    --sidebar-ring: 142 71% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors duration-200;
+  }
+
+  .card-base {
+    @apply bg-card text-card-foreground rounded-xl border border-border p-6 shadow-sm;
+  }
+}
